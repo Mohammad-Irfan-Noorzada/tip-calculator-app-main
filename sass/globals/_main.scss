@@ -1,0 +1,260 @@
+@use "function" as x;
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__logo {
+        margin: x.rem(40) x.rem(0);
+
+        @include breakpoint("medium") {
+            margin: x.rem(163) x.rem(0) x.rem(88);
+        }
+    }
+
+    &__card {
+        background-color: $white;
+        width: 100%;
+        border-radius: x.rem(25);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: x.rem(16);
+        padding: x.rem(20) x.rem(28);
+
+        @include breakpoint("medium") {
+            max-width: 100%;
+            width: x.rem(920);
+            border-radius: x.rem(25);
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: x.rem(10);
+            padding-right: 0;
+            flex-direction: row;
+            gap: x.rem(48);
+        }
+    }
+
+    &__input {
+        max-width: 100%;
+        width: x.rem(378);
+        display: flex;
+        flex-direction: column;
+        gap: x.rem(16);
+        margin-bottom: x.rem(15);
+        margin-top: x.rem(15);
+    }
+
+    &__label-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: x.rem(10);
+
+        &.tip {
+            margin-bottom: x.rem(16);
+        }
+    }
+
+    & label {
+        color: $grey-500;
+        font-size: x.rem(16);
+        font-weight: 700;
+    }
+
+    &__error-msg {
+        color: rgb(216, 119, 119);
+        font-weight: 700;
+        font-size: x.rem(14);
+        opacity: 0;
+    }
+
+    .show-error-msg {
+        transition: .3 ease-in-out;
+        opacity: 1;
+    }
+
+    &__tip-container {
+        margin: x.rem(16) 0;
+
+        @include breakpoint("medium") {
+            margin: x.rem(25) 0;
+        }
+    }
+
+    &__inp-text {
+        background-color: $grey-50;
+        border: none;
+        width: 100%;
+        border-radius: x.rem(5);
+        font-weight: 700;
+        text-align: right;
+        font-size: $font-size;
+        font-family: $primary-family;
+        color: $green-900;
+        padding: x.rem(4) x.rem(18);
+
+        @include breakpoint("medium") {
+            padding: x.rem(6) x.rem(18);
+        }
+
+        &:focus {
+            outline: none;
+            border: x.rem(2) solid $green-400;
+        }
+    }
+    
+    &__inp-wrapper {
+        position: relative;
+
+        & img {
+            position: absolute;
+            left: x.rem(17);
+            top: x.rem(14);
+            width: x.rem(11);
+
+            @include breakpoint("medium") {
+                width: x.rem(12);
+            }
+        }
+    }
+
+    &__btn-wrappers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: x.rem(16);
+
+        @include breakpoint("medium") {
+            gap: x.rem(11.2);
+        }
+    }
+
+    &__btn-wrapper {
+        max-width: 100%;
+        width: x.rem(146);
+        text-align: center;
+        background-color: $green-900;
+        color: $white;
+        font-size: x.rem(24);
+        font-weight: 700;
+        border-radius: x.rem(6);
+        padding: x.rem(6) 0;
+        transition: .3s;
+
+        &:hover {
+            background-color: $light-green-hover;
+            color: $green-900; 
+        }
+
+        &.active {
+            background-color: $green-400;
+            color: $green-900;
+        }
+
+        @include breakpoint("medium") {
+            width: x.rem(117);
+        }
+    }
+
+    &__btn-costum {
+        width: x.rem(146);
+        background-color: $grey-50;
+        color: $green-900;
+        border: none;
+        border-radius: x.rem(6);
+        padding: x.rem(6) 0;
+        text-align: center;
+        font-size: $font-size;
+        font-family: $primary-family;
+        font-weight: 700;
+
+        &:focus {
+            outline: x.rem(2) solid $green-400;
+        }
+
+        @include breakpoint("medium") {
+            width: x.rem(117);
+        }
+    }
+
+    &__output {
+        background-color: $green-900;
+        max-width: 100%;
+        width: x.rem(413);
+        border-radius: x.rem(16);
+        padding: x.rem(24);
+
+        @include breakpoint("medium") {
+            padding: x.rem(35);
+            margin: x.rem(30) 0;
+        }
+    }
+
+    &__line-output {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: x.rem(16) 0 x.rem(30);
+
+        @include breakpoint("medium") {
+            margin: x.rem(10) 0 x.rem(25);
+        }
+    }
+
+    &__line-wrapper {
+        margin-bottom: x.rem(35);
+
+        @include breakpoint("medium") {
+            margin-bottom: x.rem(128);
+        }
+    }
+
+    &__title-output {
+        font-size: x.rem(15);
+        color: $white;
+        font-weight: 800;
+    }
+
+    &__disc-output {
+        font-size: x.rem(12);
+        color: $grey-400;
+    }
+
+    &__value-output {
+        font-size: x.rem(28);
+        color: $green-400;
+        font-weight: 700;
+
+        @include breakpoint("medium") {
+            font-size: x.rem(50);
+        }
+    }
+
+    &__btn-output {
+        max-width: 100%;
+        width: x.rem(450);
+        margin: 0 auto;
+        text-transform: uppercase;
+        padding: x.rem(8) 0;
+        font-family: $primary-family;
+        font-weight: 800;
+        font-size: x.rem(19);
+        background-color: $green-400;
+        color: $green-900;
+        border: none;
+        border-radius: x.rem(5);
+        transition: .3s;
+
+        &:hover {
+            background-color: $light-green-hover;
+        }
+    }
+}
+
+

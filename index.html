@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="dist/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+
+  <main class="main">
+    <section class="main__logo">
+      <img src="./images/logo.svg" alt="splitter logo">
+    </section>
+
+    <section class="main__card">
+      <div class="main__input">
+        <div class="main__bill-container">
+          <div class="main__label-wrapper">
+            <label for="main__inp-bill">Bill</label>
+          </div>
+          <div class="main__inp-wrapper">
+            <input class="main__inp-text" type="text" name="main__inp-bill" id="inp-bill" placeholder="0.0">
+            <img src="./images/icon-dollar.svg" alt="dollar-icon">
+          </div>
+        </div>
+
+        <div class="main__tip-container">
+          <div class="main__label-wrapper tip">
+            <label for="main__inp-tip">Select Tip %</label>
+          </div>
+          <div class="main__btn-wrappers">
+            <div class="main__btn-wrapper tip">5%</div>
+            <div class="main__btn-wrapper tip">10%</div>
+            <div class="main__btn-wrapper active tip">15%</div>
+            <div class="main__btn-wrapper tip">25%</div>
+            <div class="main__btn-wrapper tip">50%</div>
+            <input class="main__btn-costum" type="text" name="main__inp-tip" id="inp-tip" placeholder="Custom">
+          </div>
+        </div>
+
+        <div class="main__people-container">
+          <div class="main__label-wrapper">
+            <label for="main__inp-people">Number of People</label>
+            <div class="main__error-msg">Can't be zero</div>
+          </div>
+          <div class="main__inp-wrapper">
+            <input class="main__inp-text" type="text" name="main__inp-people" id="inp-people" placeholder="1">
+            <img src="./images/icon-person.svg" alt="person-icon">
+          </div>
+        </div>
+
+      </div>
+      <div class="main__output">
+
+        <div class="main__line-wrapper">
+          <div class="main__line-output">
+            <div class="main__title-wrapper">
+              <div class="main__title-output">Tip Amount</div>
+              <div class="main__disc-output">/ person</div>
+            </div>
+            <div class="main__value-output" id="tip-amount">$4.27</div>
+          </div>
+
+          <div class="main__line-output">
+            <div class="main__title-wrapper">
+              <div class="main__title-output">Total</div>
+              <div class="main__disc-output">/ person</div>
+            </div>
+            <div class="main__value-output" id="total-amount">$32.79</div>
+          </div>
+        </div>
+
+        <button class="main__btn-output reset">Reset</button>
+
+      </div>
+
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  
+</body>
+</html>

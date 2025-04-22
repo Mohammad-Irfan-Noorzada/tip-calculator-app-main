@@ -1,0 +1,8 @@
+@use 'sass:math';
+
+@function rem($value) {
+    @if not math.is-unitless($value) {
+        @error "Invalid input. Use a unitless number.";
+    }
+    @return math.div($value, 16) * 1rem;
+}

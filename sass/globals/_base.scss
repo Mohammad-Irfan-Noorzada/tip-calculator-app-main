@@ -1,0 +1,17 @@
+@import "variable";
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: $primary-family;
+    background-color: $grey-200;
+}
